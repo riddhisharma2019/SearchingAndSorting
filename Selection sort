@@ -1,0 +1,23 @@
+class Selection{
+public static void main(String[] args){
+         int a[]={12,2,13,44,34,5,23}
+          int temp=0;
+        int n = a.length;
+           for(int i =0 ,i <n-1;i++){
+           int min=i;
+          for(int j=j+1;j<n;j++){
+            if(a[j]<a[min]){
+            min=j;
+            
+          temp=a[min];
+          a[min] = a[i];
+          a[i] =temp;
+          }
+
+        System.out.println("Sorted array");	
+        	for(int k=0;k<n;k++) {
+        		System.out.println(a[k]);
+}
+}
+	}
+}
