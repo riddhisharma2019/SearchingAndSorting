@@ -1,0 +1,51 @@
+package searching;
+
+public class BinarySearch {
+	
+	public static int search(int a[], int x) {
+		
+		int l=0;                           // declaration is imp of size
+		int r = a.length-1;
+		
+		while(l<=r) {          
+			
+			int m= (l+r)/2;         // first find the mid
+			
+			if(a[m]==x)         // then apply in conditions
+			return m;
+			
+			if(x > a[m]) 
+			l=m+1;                   // yeh right side meh padega usme se search karenge
+			
+			else
+			
+				r=m-1;                // yeh left side 
+			}
+			
+		return -1;	                         // vrna h he nhi element
+		}
+	
+	
+	// drivver code.......
+	public static void main(String[] args) {
+		
+		int a[]= {12,22,34,56,67,89,90};
+		int x= 890;
+		 
+//		BinarySearch ob = new BinarySearch();
+		int result =search(a,x);             // func call with object
+		
+		if(result==-1) {
+			
+		System.out.println("element is not found!!");
+		
+	}
+		else {
+			System.out.println("element is found at index is: "+ result);
+		}
+		
+	}
+	
+	
+
+}
